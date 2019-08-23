@@ -2,6 +2,7 @@ import React,{Component} from 'react';
 import axios from 'axios';
 import {InputGroup,FormControl} from 'react-bootstrap';
 import "./AlertForm.css"
+import {Link} from "react-router-dom";
 
 class AlertForm extends Component {
 
@@ -63,6 +64,8 @@ class AlertForm extends Component {
                         <option selected >Choose</option>
                         <option value="GET">Get</option>
                         <option value="POST">Post</option>
+                        <option value="DELETE">Delete</option>
+                        <option value="PUT">Put</option>
                     </select>
                 </div>
                 <InputGroup className="period">
@@ -71,7 +74,7 @@ class AlertForm extends Component {
                     </InputGroup.Prepend>
                     <FormControl aria-label="period" id="period" placeholder="Period" type="number" min="1" name='period' ref={this.state.period} onChange={e => this.handleChange(e)} />
                 </InputGroup>
-                <button type="button" className="btn-sample" onClick={(e) => this.onSubmit(e)} >Submit</button>
+                <Link to={'/alertlist'}><button type="button" className="btn-sample" onClick={(e) => this.onSubmit(e)} >Submit</button></Link>
             </div>
 
         );

@@ -89,7 +89,7 @@ class UpdateData extends React.Component {
                     </InputGroup.Prepend>
                     <FormControl aria-label="period" id="period" value={this.state.period} placeholder="Period" type="number" min="1" name='period' ref={this.state.period} onChange={e => this.handleChange(e)} />
                 </InputGroup>
-                <button type="button" className="btn-sample" onClick={(e) => this.onSubmit(e)} >Update</button>
+                <Link to={'/alertlist/'}><button type="button" className="btn-sample" onClick={(e) => this.onSubmit(e)} >Update</button></Link>
                 <td><Link to={'/alertlist/'}><Button type="button" className="btn-sample">Cancel</Button></Link></td>
             </div>
 
